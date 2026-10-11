@@ -13,7 +13,7 @@ This guide is for a judge who has downloaded RAKSHA app from GitHub repository a
 ## 2\. Review the Download projects file
 
 1. Open the RAKSHA repository page.
-2. Confirm that `package.json`, `SETUP-RAKSHA.cmd`, and `START-RAKSHA.cmd` are visible.
+2. Confirm that `package.json`, `SETUP-RAKSHA.cmd`, `example.env`, and `START-RAKSHA.cmd` are visible.
 
 ## 3\. First-time installation
 
@@ -21,6 +21,7 @@ This guide is for a judge who has downloaded RAKSHA app from GitHub repository a
 2. Else you can manually install the Node.js 20 LTS: https://nodejs.org/
 3. If needed, installs dependencies using npm install on cmd prompt to the same project directory.
 4. Continue only if the script reports success. If it fails, note the complete error text.
+5. Change the exapmle.env file name to .env
 
 ## 4\. Optional API configuration
 
