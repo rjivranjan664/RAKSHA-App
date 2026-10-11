@@ -21,7 +21,7 @@ This guide is for a judge who has downloaded RAKSHA app from GitHub repository a
 2. Else you can manually install the Node.js 20 LTS: https://nodejs.org/
 3. If needed, installs dependencies using npm install on cmd prompt to the same project directory.
 4. Continue only if the script reports success. If it fails, note the complete error text.
-5. Change the exapmle.env file name to .env
+5. Change the example.env file name to .env
 
 ## 4\. Optional API configuration
 
