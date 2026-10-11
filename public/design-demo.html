@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/raksha-mark.svg" />
+  <title>RAKSHA · Design review</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #eff7ff; background: #081a2b; font-family: "Segoe UI", Arial, sans-serif; }
+    header { min-height: 74px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 13px clamp(14px, 3vw, 34px); background: #0d2b4b; border-bottom: 1px solid #345a7b; }
+    header img { width: 38px; height: 38px; border-radius: 10px; }
+    header strong { display: block; font-size: 16px; letter-spacing: .08em; }
+    header span { color: #c8d9e8; font-size: 12px; }
+    nav { display: flex; gap: 9px; margin-left: auto; }
+    button { min-height: 38px; padding: 7px 14px; border: 1px solid #688bab; border-radius: 9px; color: #eff7ff; background: #214768; cursor: pointer; }
+    button[aria-pressed="true"] { border-color: #9fd1ff; color: #10243b; background: #d8ecff; }
+    button:hover, button:focus { outline: 2px solid #7bbfff; outline-offset: 2px; box-shadow: 0 0 0 5px rgba(119,189,255,.25); }
+    main { padding: clamp(10px, 2vw, 24px); }
+    iframe { display: block; width: 100%; height: calc(100dvh - 120px); min-height: 610px; margin: auto; border: 1px solid #345a7b; border-radius: 14px; background: #fff; box-shadow: 0 20px 60px rgba(0, 0, 0, .38); }
+    iframe.mobile { width: 390px; max-width: 100%; height: 844px; }
+    @media (max-width: 600px) { nav { width: 100%; margin: 0; } iframe { height: 85dvh; } }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/raksha-mark.svg" alt="" />
+    <div><strong>RAKSHA · DESIGN REVIEW</strong><span>Sample data · use the in-app switch for light and dark blue themes</span></div>
+    <nav aria-label="Preview size">
+      <button type="button" id="desktop" aria-pressed="true">Desktop</button>
+      <button type="button" id="mobile" aria-pressed="false">Mobile · 390 px</button>
+    </nav>
+  </header>
+  <main><iframe id="preview" src="/demo.html" title="RAKSHA interactive design demo" allow="microphone; geolocation"></iframe></main>
+  <script>
+    const preview = document.getElementById("preview");
+    for (const id of ["desktop", "mobile"]) {
+      document.getElementById(id).onclick = () => {
+        preview.classList.toggle("mobile", id === "mobile");
+        document.getElementById("mobile").setAttribute("aria-pressed", String(id === "mobile"));
+        document.getElementById("desktop").setAttribute("aria-pressed", String(id === "desktop"));
+      };
+    }
+  </script>
+</body>
+</html>

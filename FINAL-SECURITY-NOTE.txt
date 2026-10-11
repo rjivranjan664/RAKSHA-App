@@ -1,0 +1,15 @@
+RAKSHA FINAL SUBMISSION PACKAGE
+
+This package intentionally does not include node_modules or a real .env file.
+
+Setup:
+1. Run SETUP-RAKSHA.cmd or npm install.
+2. Copy .env.example to .env.
+3. Add your own Gemini and TextBee credentials to .env.
+4. Never commit or share .env.
+
+Emergency contact:
+The citizen enters the family/emergency phone number inside RAKSHA under CITIZEN PROFILE > Household. It is not entered in .env.
+
+India emergency service:
+112 is the emergency number used by the emergency call action.

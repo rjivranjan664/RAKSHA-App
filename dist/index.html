@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/raksha-mark.svg" />
+    <meta
+      name="description"
+      content="RAKSHA - Risk Awareness, Knowledge, Safety & Humanitarian Action"
+    />
+    <title>RAKSHA — Emergency Resilience Platform</title>
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem("raksha_theme");
+          const theme = saved === "light" || saved === "dark"
+            ? saved
+            : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/app-PBngT8Y-.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/main-BJA4NU-c.js">
+    <link rel="stylesheet" crossorigin href="/assets/main-CXV0cbjD.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
